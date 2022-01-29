@@ -1,15 +1,18 @@
 import './App.css'
-import Game from './components/ticktactoe/Game';
+import Card from './components/card/Card';
+import CardList from './components/card/CardList';
+
 
 function App() {
 
-  
-
   //render DOM
   return (
-    <div>
-      <Game></Game>
-    </div>
+    <CardList>
+      <Card secondary fontSize = '30px'></Card>
+      <Card></Card>
+      <Card></Card>
+      <Card></Card>
+    </CardList>
   );
 }
 
