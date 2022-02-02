@@ -23,5 +23,6 @@ yarn-debug.log*
 yarn-error.log*
 
 #project example ignore
-/src/components/ticktactoe
-/src/components/button
+src/components/button
+src/components/ticktactoe
+src/components/card
