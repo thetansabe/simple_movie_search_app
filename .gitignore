@@ -24,5 +24,6 @@ yarn-error.log*
 
 #project example ignore
 src/components/button
-src/components/ticktactoe
 src/components/card
+src/components/photo
+src/components/tictactoe

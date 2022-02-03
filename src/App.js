@@ -1,12 +1,12 @@
 import './App.css'
-import Photo from './components/photo/Photo';
+import HackerNews from './components/news/HackerNews';
 
 
 function App() {
 
   //render DOM
   return (
-    <Photo></Photo>
+    <HackerNews></HackerNews>
   );
 }
 
