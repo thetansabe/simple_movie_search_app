@@ -17,7 +17,7 @@
 .env.development.local
 .env.test.local
 .env.production.local
-
+.env
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
@@ -26,4 +26,7 @@ yarn-error.log*
 src/components/button
 src/components/card
 src/components/photo
-src/components/tictactoe
+/src/components/ticktactoe
+src/components/news
+src/components/Dropdown.js
+src/components/card

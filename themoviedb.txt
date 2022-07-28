@@ -1,0 +1,12 @@
+API key v3:
+11905fbb67d374be626d3fd5bb056d36
+Username:
+thetan
+Password:
+1478963aAPImovie
+Example:
+https://api.themoviedb.org/3/movie/550?api_key=11905fbb67d374be626d3fd5bb056d36
+Search query:
+https://api.themoviedb.org/3/search/movie?api_key={api_key}&query=Jack+Reacher
+Poster link:
+https://image.tmdb.org/t/p/original/wwemzKWzjKYJFfCeiB57q3r4Bcm.png
