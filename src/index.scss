@@ -26,3 +26,17 @@
         height: 100%;
     }
 }
+
+.pagination{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    margin: 20px 0;
+    color: white;
+    .selected{
+        @apply bg-primary;
+        padding: 2px 8px;
+        border-radius: 6px;
+    }
+}

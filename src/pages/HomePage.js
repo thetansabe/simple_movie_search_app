@@ -1,6 +1,6 @@
 import React, { Fragment } from 'react'
-import MovieBanner from '../components/MovieBanner'
-import MovieSection from '../components/MovieSection'
+import MovieBanner from 'components/MovieBanner'
+import MovieSection from 'components/MovieSection'
 
 export default function HomePage() {
   return (

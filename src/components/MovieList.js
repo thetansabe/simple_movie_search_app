@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { SwiperSlide, Swiper } from "swiper/react";
 import MovieCard from "./MovieCard";
 import useSWR from "swr";
@@ -13,13 +13,9 @@ export default function MovieList(props) {
 
   const { data } = useSWR(baseLink, fetcher);
 
-  const [movies, setMovies] = useState([]);
+  const movies = data?.results || []
 
-  useEffect(() => {
-    if(data && data.results) setMovies(data.results);
-  }, [data]);
 
-  console.log(movies);
   return (
     <div className="movie-list">
       {/* film list */}

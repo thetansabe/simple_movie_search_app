@@ -1,6 +1,13 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
+import { PrimaryButton } from 'components/buttons/PrimaryButton'
 
 export default function MovieCard({ info }) {
+  const navigate = useNavigate();
+  const img_src = info.poster_path
+    ? process.env.REACT_APP_MOVIEDB_IMAGE + info.poster_path
+    : process.env.PUBLIC_URL + "/not_found_movie.jpg";
+
   return (
     <div
       className="movie-card 
@@ -8,7 +15,7 @@ export default function MovieCard({ info }) {
         flex flex-col select-none"
     >
       <img
-        src={process.env.REACT_APP_MOVIEDB_IMAGE + info.poster_path}
+        src={img_src}
         alt={info.title}
         className="w-full h-[250px] object-cover rounded-lg"
       />
@@ -21,14 +28,13 @@ export default function MovieCard({ info }) {
           <span>{info.vote_average}</span>
         </div>
 
-        <div className="flex items-center justify-between mt-auto">
-          <button className=" py-3 px-6 rounded-lg capitalize bg-primary font-bold">
-            Watch
-          </button>
-
-          <button className=" text-primary py-3 px-6 rounded-lg capitalize border border-primary font-bold">
-            Trailer
-          </button>
+        <div className="mt-4">
+          <PrimaryButton
+            optionalStyles="bg-primary w-full"
+            onClick={() => {
+              navigate(`/movie/${info.id}`);
+            }}
+          >Watch Now</PrimaryButton>
         </div>
       </div>
     </div>

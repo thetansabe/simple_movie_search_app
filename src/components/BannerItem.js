@@ -1,7 +1,10 @@
 import React from 'react'
+import { useNavigate } from "react-router-dom";
+import { PrimaryButton } from 'components/buttons/PrimaryButton'
 //import { getGenre } from '../utils/helper'
 
 export default function BannerItem({info}) {
+  const navigate = useNavigate();
 
   return (
     <div className="w-full h-full rounded-lg relative">
@@ -23,15 +26,18 @@ export default function BannerItem({info}) {
           {/* film genres */}
           <div className="flex items-center gap-x-3">
             {info.genre_ids.map(genre => (
-                <div className="py-2 px-4 border border-white rounded-md">
+                <div key={genre} className="py-2 px-4 border border-white rounded-md">
                 {genre}
               </div>
             ))}
           </div>
 
-          <button className="py-3 px-6 rounded-lg bg-primary font-medium mt-4">
-            Watch now
-          </button>
+          <PrimaryButton
+            optionalStyles="bg-primary mt-4"
+            onClick={() => {
+              navigate(`/movie/${info.id}`);
+            }}
+          >Watch Now</PrimaryButton>
         </div>
       </div>
   )

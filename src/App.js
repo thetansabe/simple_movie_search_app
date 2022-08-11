@@ -1,9 +1,10 @@
 import React, { Fragment } from "react";
 import { Route, Routes } from "react-router-dom";
 import "swiper/scss";
-import Main from "./components/layout/Main";
-import HomePage from "./pages/HomePage";
-import MoviePage from "./pages/MoviePage";
+import Main from "components/layout/Main";
+import HomePage from "pages/HomePage";
+import MovieDetailPage from "pages/MovieDetailPage";
+import MoviePage from "pages/MoviePage";
 
 function App() {
   //render DOM
@@ -16,6 +17,7 @@ function App() {
         
           {/* movies page */}
           <Route path="/movies" element={<MoviePage></MoviePage>}></Route>
+          <Route path="/movie/:movieId" element={<MovieDetailPage></MovieDetailPage>}></Route>
         </Route>
 
       </Routes>
